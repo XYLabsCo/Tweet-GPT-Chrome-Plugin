@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Twitter GPT</title>
+    <style>
+        body {
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #1DA1F2;
+            color: white;
+        }
+
+        #status {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        #prompt {
+            width: 100%;
+            box-sizing: border-box;
+            /* This ensures that the padding and border are included in the element's total width */
+            height: 70px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: whitesmoke;
+        }
+
+        #generateButton {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: white;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #generateButton:hover {
+            background-color: #000;
+            color: white;
+        }
+
+        #tweetCard {
+            width: 100%;
+            box-sizing: border-box;
+            /* This ensures that the padding and border are included in the element's total width */
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: white;
+            color: #1DA1F2;
+        }
+
+        #tweetText {
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+        }
+
+        #copyButton {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: whitesmoke;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #copyButton:hover {
+            background-color: #000000;
+            color: white;
+        }
+
+        #viewHistoryButton {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: white;
+            color: #1DA1F2;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+
+        #viewHistoryButton:hover {
+            background-color: #000000;
+            color: white;
+        }
+
+        #backButton {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: white;
+            color: #1DA1F2;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+
+        #backButton:hover {
+            background-color: #000000;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tweetGenerator">
+        <div id="status">What is your Tweet about?</div>
+        <textarea id="prompt"></textarea>
+        <button id="generateButton">Generate Tweet</button>
+        <div id="tweetCard">
+            <h4>Your Tweet</h4>
+            <p id="tweetText"></p>
+            <button id="copyButton">Copy Tweet</button>
+        </div>
+        <button id="viewHistoryButton">View Tweet History</button>
+    </div>
+    <div id="tweetHistory" style="display: none;">
+        <h1>Tweet History</h1>
+        <div id="tweets"></div>
+        <button id="backButton">Back</button>
+    </div>
+    <p>Created by XYLabs</p>
+
+    <script src="popup.js"></script>
+</body>
+</html>
